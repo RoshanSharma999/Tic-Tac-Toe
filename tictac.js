@@ -191,6 +191,7 @@ mode[0].addEventListener("click", () => {
     modeStatus = "onep";
     mode[0].style.opacity = 1;
     mode[1].style.opacity = 0.5;
+    para.style.opacity = 0;
     resetGame();
     clearBoard();
     removeBoxEventListeners();
@@ -199,6 +200,7 @@ mode[1].addEventListener("click", () => {
     modeStatus = "twop";
     mode[1].style.opacity = 1;
     mode[0].style.opacity = 0.5;
+    para.style.opacity = 0;
     resetGame();
     clearBoard();
     removeBoxEventListeners();
