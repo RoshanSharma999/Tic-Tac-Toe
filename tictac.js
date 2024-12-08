@@ -31,9 +31,7 @@ function btnClickFxn() {
     box.style.opacity = 1;
     btn.style.opacity = 0.5;
     para.style.opacity = 0;
-    for (let i = 0; i <= 8; i++) {
-        boxes[i].innerText = "";
-    }
+    clearBoard();
     if (modeStatus == "onep") {
         for (let i = 0; i <= 8; i++) {
             const listener = () => boxClick1(i);
@@ -189,10 +187,14 @@ mode[0].addEventListener("click", () => {
     mode[0].style.opacity = 1;
     mode[1].style.opacity = 0.5;
     resetGame();
+    clearBoard();
+    removeBoxEventListeners();
 });
 mode[1].addEventListener("click", () => {
     modeStatus = "twop";
     mode[1].style.opacity = 1;
     mode[0].style.opacity = 0.5;
     resetGame();
+    clearBoard();
+    removeBoxEventListeners();
 });
